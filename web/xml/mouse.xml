@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<computer_mouse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/mouse.xsd">
+
+    <mouse>
+        <model>RJ-13-p</model>
+        <price>1</price>
+        <manufacturer id="1">
+            <name>Asus</name>
+            <founded>1989</founded>
+            <industry>Computer hardware Electronics</industry>
+            <country>Taiwan</country>
+        </manufacturer>
+        <interface>usb</interface>
+        <connection_type>cable</connection_type>
+        <appointment>game</appointment>
+        <dpi>2400</dpi>
+        <keys_number>2</keys_number>
+        <type>laser</type>
+    </mouse>
+
+    <mouse>
+        <model>RJ-13-p</model>
+        <price>1</price>
+        <manufacturer id="1">
+            <name>Asus</name>
+            <founded>1989</founded>
+            <industry>Computer hardware Electronics</industry>
+            <country>Taiwan</country>
+        </manufacturer>
+        <interface>usb</interface>
+        <connection_type>cable</connection_type>
+        <appointment>game</appointment>
+        <dpi>2600</dpi>
+        <keys_number>4</keys_number>
+        <type>laser</type>
+    </mouse>
+
+</computer_mouse>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="peripherial.xsd"/>
+
+    <xs:element name="computer_keyboard" type="computer_keyboardType"/>
+    <xs:complexType name="computer_keyboardType">
+        <xs:sequence>
+            <xs:element type="keyboardType" name="keyboard" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="keyboardType">
+        <xs:complexContent>
+            <xs:extension base="peripheralType">
+                <xs:sequence>
+                    <xs:element name="usb-port" type="xs:boolean"/>
+                    <xs:element name="touchpad" type="xs:boolean"/>
+                    <xs:element name="lightning" type="xs:boolean"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+</xs:schema>

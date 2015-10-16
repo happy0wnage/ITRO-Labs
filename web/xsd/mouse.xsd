@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="peripherial.xsd"/>
+
+    <xs:element name="computer_mouse" type="computer_mouseType"/>
+    <xs:complexType name="computer_mouseType">
+        <xs:sequence>
+            <xs:element type="mouseType" name="mouse" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="mouseType">
+        <xs:complexContent>
+            <xs:extension base="peripheralType">
+                <xs:sequence>
+                    <xs:element name="dpi" type="xs:int"/>
+                    <xs:element name="keys_number" type="xs:int"/>
+                    <xs:element type="xs:string" name="type"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+</xs:schema>

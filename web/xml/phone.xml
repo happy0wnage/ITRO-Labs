@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<mobile_phone xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/phone.xsd">
+    <phone>
+        <model>Redmi Note 2</model>
+        <price>4200</price>
+        <manufacturer id="3">
+            <name>Xiaomi</name>
+            <founded>2010</founded>
+            <industry>Consumer electronics Computer hardware</industry>
+            <country>China</country>
+        </manufacturer>
+        <sim-card_number>2</sim-card_number>
+        <screen_size>5.5'</screen_size>
+        <resolution>940x480</resolution>
+        <OS>Android</OS>
+    </phone>
+
+    <phone>
+        <model>Iphone 5S</model>
+        <price>13000</price>
+        <manufacturer id="4">
+            <name>Apple</name>
+            <founded>1976</founded>
+            <industry>Computer hardware, Computer software, Consumer electronics, Digital distribution</industry>
+            <country>USA</country>
+        </manufacturer>
+        <sim-card_number>1</sim-card_number>
+        <screen_size>4'</screen_size>
+        <resolution>1280x940</resolution>
+        <OS>IOS</OS>
+    </phone>
+</mobile_phone>

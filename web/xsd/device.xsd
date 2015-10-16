@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="device" type="devicesType"/>
+
+    <xs:complexType name="devicesType">
+        <xs:sequence>
+            <xs:element type="itemType" name="item" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="itemType">
+        <xs:sequence>
+            <xs:element name="model" type="xs:string"/>
+            <xs:element name="price" type="xs:double"/>
+            <xs:element name="manufacturer" type="manufacturerType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="manufacturerType" mixed="true">
+        <xs:sequence>
+            <xs:element type="xs:string" name="name" minOccurs="0"/>
+            <xs:element type="xs:int" name="founded" minOccurs="0"/>
+            <xs:element type="xs:string" name="industry" minOccurs="0"/>
+            <xs:element type="xs:string" name="country" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute type="xs:int" name="id" use="optional"/>
+    </xs:complexType>
+
+</xs:schema>

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<device xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/device.xsd">
+    <item>
+        <model>RJ-13-p</model>
+        <price>1</price>
+        <manufacturer id="1">
+            <name>Asus</name>
+            <founded>1989</founded>
+            <industry>Computer hardware Electronics</industry>
+            <country>Taiwan</country>
+        </manufacturer>
+    </item>
+
+    <item>
+        <model>TT15</model>
+        <price>2321</price>
+        <manufacturer id="2">
+            <name>Asus</name>
+            <founded>1989</founded>
+            <industry>Computer hardware Electronics</industry>
+            <country>Taiwan</country>
+        </manufacturer>
+    </item>
+
+    <item>
+        <model>SM-T</model>
+        <price>0</price>
+        <manufacturer id="3">
+            <name>Asus</name>
+            <founded>1989</founded>
+            <industry>Computer hardware Electronics</industry>
+            <country>Taiwan</country>
+        </manufacturer>
+    </item>
+
+</device>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="device.xsd"/>
+
+    <xs:element name="peripheral" type="peripheralType"/>
+    <xs:complexType name="peripheralType">
+        <xs:complexContent>
+            <xs:extension base="itemType">
+                <xs:sequence>
+                    <xs:element type="xs:string" name="interface"/>
+                    <xs:element type="xs:string" name="connection_type"/>
+                    <xs:element type="xs:string" name="appointment"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+</xs:schema>

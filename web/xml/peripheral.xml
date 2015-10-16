@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<peripheral xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/peripherial.xsd">
+    <model></model>
+    <price></price>
+    <manufacturer></manufacturer>
+
+    <interface>usb</interface>
+    <connection_type>cable</connection_type>
+    <appointment>game</appointment>
+</peripheral>

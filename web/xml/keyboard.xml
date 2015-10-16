@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<computer_keyboard xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/keyboard.xsd">
+    <keyboard>
+        <model>RJ-13-p</model>
+        <price>1</price>
+        <manufacturer id="1">
+            <name>Asus</name>
+            <founded>1989</founded>
+            <industry>Computer hardware Electronics</industry>
+            <country>Taiwan</country>
+        </manufacturer>
+        <interface>usb</interface>
+        <connection_type>cable</connection_type>
+        <appointment>game</appointment>
+        <usb-port>false</usb-port>
+        <touchpad>false</touchpad>
+        <lightning>false</lightning>
+    </keyboard>
+
+    <keyboard>
+        <model>RJ-13-p</model>
+        <price>1</price>
+        <manufacturer id="1">
+            <name>Asus</name>
+            <founded>1989</founded>
+            <industry>Computer hardware Electronics</industry>
+            <country>Taiwan</country>
+        </manufacturer>
+        <interface>usb</interface>
+        <connection_type>cable</connection_type>
+        <appointment>game</appointment>
+        <usb-port>true</usb-port>
+        <touchpad>true</touchpad>
+        <lightning>true</lightning>
+    </keyboard>
+</computer_keyboard>
