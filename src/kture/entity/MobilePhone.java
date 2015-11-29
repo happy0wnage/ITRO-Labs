@@ -1,15 +1,16 @@
 package kture.entity;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Владислав on 10/02/15.
- */
+@XmlRootElement(name = "mobile_phone")
 public class MobilePhone {
 
     private List<Phone> phoneList;
 
+    @XmlElement (name = "phone")
     public List<Phone> getPhoneList() {
 
         if(phoneList == null) {
@@ -24,8 +25,10 @@ public class MobilePhone {
 
     @Override
     public String toString() {
-        return "MobilePhone{" +
-                "phoneList=" + phoneList +
-                '}';
+        StringBuilder sb = new StringBuilder();
+        for (Phone phone : phoneList) {
+            sb.append(phone.toString()).append("\n");
+        }
+        return sb.toString();
     }
 }

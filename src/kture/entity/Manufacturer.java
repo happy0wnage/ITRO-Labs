@@ -1,8 +1,19 @@
 package kture.entity;
 
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
+
 /**
  * Created by Владислав on 01.10.2015.
  */
+
+@XmlType(name = "manufacturer", propOrder = {
+        "name",
+        "founded",
+        "industry",
+        "country"
+})
 public class Manufacturer {
 
     private int idManufacturer;
@@ -15,6 +26,7 @@ public class Manufacturer {
 
     private String country;
 
+    @XmlAttribute(name = "id", required = true)
     public int getIdManufacturer() {
         return idManufacturer;
     }
@@ -23,6 +35,7 @@ public class Manufacturer {
         this.idManufacturer = idManufacturer;
     }
 
+    @XmlElement(name = "name")
     public String getName() {
         return name;
     }
@@ -31,6 +44,7 @@ public class Manufacturer {
         this.name = name;
     }
 
+    @XmlElement(name = "founded")
     public int getFounded() {
         return founded;
     }
@@ -39,6 +53,7 @@ public class Manufacturer {
         this.founded = founded;
     }
 
+    @XmlElement(name = "industry")
     public String getIndustry() {
         return industry;
     }
@@ -47,6 +62,7 @@ public class Manufacturer {
         this.industry = industry;
     }
 
+    @XmlElement(name = "country")
     public String getCountry() {
         return country;
     }

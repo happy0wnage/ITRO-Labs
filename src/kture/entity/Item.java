@@ -1,20 +1,26 @@
-package kture.entity.notUsed;
-
-import kture.entity.Manufacturer;
-
-import java.util.List;
+package kture.entity;
 
 /**
  * Created by Владислав on 01.10.2015.
  */
+
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
+
+@XmlType(name = "item",
+        propOrder = {
+                "model",
+                "price",
+                "manufacturer"
+        })
+
 public class Item {
 
     private String model;
-
     private double price;
-
     private Manufacturer manufacturer;
 
+    @XmlElement(name = "price", required = true)
     public double getPrice() {
         return price;
     }
@@ -23,6 +29,7 @@ public class Item {
         this.price = price;
     }
 
+    @XmlElement(name = "model", required = true)
     public String getModel() {
         return model;
     }
@@ -31,7 +38,11 @@ public class Item {
         this.model = model;
     }
 
+    @XmlElement(name = "manufacturer", required = true)
     public Manufacturer getManufacturer() {
+        if (manufacturer == null) {
+            manufacturer = new Manufacturer();
+        }
         return manufacturer;
     }
 

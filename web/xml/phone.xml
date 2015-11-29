@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <mobile_phone xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/phone.xsd">
-    <phone>
+    <phone id="1">
         <model>Redmi Note 2</model>
         <price>4200</price>
         <manufacturer id="3">
@@ -15,7 +15,7 @@
         <OS>Android</OS>
     </phone>
 
-    <phone>
+    <phone id="2">
         <model>Iphone 5S</model>
         <price>13000</price>
         <manufacturer id="4">

@@ -1,34 +1,29 @@
 package kture.parser;
 
-import kture.constants.Path;
 import kture.constants.Tags;
 import kture.entity.Manufacturer;
 import kture.entity.MobilePhone;
 import kture.entity.Phone;
-import org.w3c.dom.*;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import java.io.File;
 import java.io.IOException;
 
 /**
  * Created by Владислав on 01.10.2015.
  */
-public class DOMParser {
+public class DOMController {
 
     private String xmlFileName;
 
-    private MobilePhone mobilePhone;
-
-    public DOMParser(String xmlFileName) {
+    public DOMController(String xmlFileName) {
         this.xmlFileName = xmlFileName;
-    }
-
-    private MobilePhone getMobilePhone() {
-        return mobilePhone;
     }
 
     private Phone getPhone(Node phoneNode) {
@@ -57,6 +52,9 @@ public class DOMParser {
 
         currentNode = phoneElement.getElementsByTagName(Tags.OS).item(0);
         phone.setOperationSystem(currentNode.getTextContent());
+
+        Node attributeId = phoneElement.getAttributes().item(0);
+        phone.setIdPhone(Integer.parseInt(attributeId.getNodeValue()));
 
         return phone;
     }
@@ -106,19 +104,5 @@ public class DOMParser {
         }
 
         return mobilePhone;
-    }
-
-    public static void main(String[] args) {
-        DOMParser domParser = new DOMParser(Path.PHONE);
-        try {
-            MobilePhone mobilePhone = domParser.parse();
-            System.out.println(mobilePhone);
-        } catch (ParserConfigurationException e) {
-            e.printStackTrace();
-        } catch (SAXException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 }

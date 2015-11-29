@@ -12,7 +12,13 @@
     <xs:complexType name="itemType">
         <xs:sequence>
             <xs:element name="model" type="xs:string"/>
-            <xs:element name="price" type="xs:double"/>
+            <xs:element name="price">
+                <xs:simpleType>
+                    <xs:restriction base="xs:double">
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
             <xs:element name="manufacturer" type="manufacturerType"/>
         </xs:sequence>
     </xs:complexType>
@@ -24,7 +30,7 @@
             <xs:element type="xs:string" name="industry" minOccurs="0"/>
             <xs:element type="xs:string" name="country" minOccurs="0"/>
         </xs:sequence>
-        <xs:attribute type="xs:int" name="id" use="optional"/>
+        <xs:attribute type="xs:int" name="id" use="required"/>
     </xs:complexType>
 
 </xs:schema>
