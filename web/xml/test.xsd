@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:simpleType>
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-z]{5}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Cap1"/>
+            <xs:enumeration value="Cap2"/>
+            <xs:enumeration value="Cap3"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType>
+        <xs:restriction base="xs:positiveInteger">
+            <xs:minInclusive value="116"/>
+            <xs:maxInclusive value="771"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+    <xs:element name="book">
+        <xs:complexType>
+            <xs:attribute type="xs:int" name="id" use="required"/>
+            <xs:attribute type="xs:string" name="name" use="required"/>
+            <xs:attribute type="xs:int" name="pages"/>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:element name="result">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:restriction base="xs:double">
+                    <xs:attribute type="xs:string" name="unit"/>
+                    <xs:attribute type="xs:string" name="precision"/>
+                </xs:restriction>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

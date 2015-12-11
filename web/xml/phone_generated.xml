@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mobile_phone>
+    <phone id="1">
+        <model>MX 5</model>
+        <price>8600.0</price>
+        <manufacturer id="1">
+            <name>Meizu</name>
+            <founded>2005</founded>
+            <industry>IT</industry>
+            <country>China</country>
+        </manufacturer>
+
+        <sim-card_number>2</sim-card_number>
+        <screen_size>5.5'</screen_size>
+        <resolution>1920x1080</resolution>
+        <OS>Android</OS>
+    </phone>
+</mobile_phone>
